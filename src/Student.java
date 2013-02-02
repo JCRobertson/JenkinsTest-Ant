@@ -22,8 +22,22 @@ public class Student {
 		}
 
 		@Override
+		public String toString(){
+			return name+" "+favoriteNumber;
+		}
+		
+		@Override
 		public boolean equals(Object o){
 			if(!(o instanceof Student))
 				return false;
+			Student s = (Student) o;
+			if(s.getName().equals(this.getName()) && s.getFavoriteNumber()==this.favoriteNumber)
+				return true;
+			return false;
+		}
+		
+		@Override
+		public int hashCode(){
+			return name.hashCode()+favoriteNumber*47;
 		}
 }
