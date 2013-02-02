@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
+
 import org.junit.Test;
 
 
@@ -12,6 +14,11 @@ public class StudentTest {
 	@Test (expected = NullPointerException.class)
 	public void nameNotNullTest() {
 		s = new Student(null, 5);
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void nameNotLegalTest() {
+		s = new Student("", 5);
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
@@ -58,5 +65,34 @@ public class StudentTest {
 		assertTrue(s.equals(s1));
 		assertTrue(s1.equals(s2));
 		assertTrue(s.equals(s2));
+	}
+	
+	@Test
+	public void equalsNotStudentTest(){
+		s = new Student("Paul", 76);
+		assertFalse(s.equals("Paul"));
+	}
+	
+	@Test
+	public void notEqualTest(){
+		s = new Student("Paul", 437);
+		s1 = new Student("James", 437);
+		assertFalse(s.equals(s1));
+	}
+	
+	@Test
+	public void hashTest(){
+		s = new Student("Paul", 437);
+		s1 = new Student("Paul", 437);
+		assertTrue(s.equals(s1));
+		assertTrue(s.hashCode()==s1.hashCode());
+	}
+	
+	@Test
+	public void hashFailTest(){
+		s = new Student("Paul", 437);
+		s1 = new Student("Paul", 17);
+		assertFalse(s.equals(s1));
+		assertFalse(s.hashCode()==s1.hashCode());
 	}
 }

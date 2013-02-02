@@ -5,7 +5,7 @@ public class Student {
 		private int favoriteNumber;
 		
 		public Student(String name, int favoriteNumber){
-			if(name.equals(null))
+			if(name==null)
 				throw new NullPointerException();
 			if(name.equals("") || favoriteNumber<0)
 				throw new IllegalArgumentException();
