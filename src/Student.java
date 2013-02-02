@@ -1,9 +1,25 @@
+/**
+ * This immutable class holds a name and a favorite number for a student
+ * 
+ * @author James Robertson
+ *
+ */
+
 
 public class Student {
 
 		private String name;
 		private int favoriteNumber;
 		
+		
+		/**
+		 * @author James Robertson
+		 * 
+		 * @param name							The name of the student
+		 * @param favoriteNumber				The favorite number of the student
+		 * @throws IllegalArgumentException 	if name is "" or favorite number <0
+		 * @throws NullPointerException 		if name is null
+		 */
 		public Student(String name, int favoriteNumber){
 			if(name==null)
 				throw new NullPointerException();
