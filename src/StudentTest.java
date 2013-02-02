@@ -37,13 +37,26 @@ public class StudentTest {
 		s1 = new Student("James", 12);
 		assertTrue(s.equals(s1));
 		assertTrue(s1.equals(s));
-	}
-	
-	@Test
-	public void equalsSymmetryFailTest(){
-		s = new Student("James", 12);
+		
 		s1 = new Student("James", 13);
 		assertFalse(s.equals(s1));
 		assertFalse(s1.equals(s));
+	}
+	
+	@Test
+	public void equalsReflexivityTest(){
+		s = new Student("James", 12);
+		s1 = new Student("James", 12);
+		assertTrue(s.equals(s1));
+	}
+	
+	@Test
+	public void equalsTransitivityTest(){
+		s = new Student("James", 13);
+		s1 = new Student("James", 13);
+		s2 = new Student("James", 13);
+		assertTrue(s.equals(s1));
+		assertTrue(s1.equals(s2));
+		assertTrue(s.equals(s2));
 	}
 }
