@@ -5,8 +5,6 @@
   <target name="compile" description="Compilation target">
     <javac srcdir="src/"/>
   </target>
-  
-  <target name="main" depends="runtests" description="Main target for running the tests." />
  
     <target name="runtests" description="Make output directories and run the MXUnit task">
       <taskdef name="mxunittask" classname="org.mxunit.ant.MXUnitAntTask"  classpath="../../ant/lib/mxunit-ant.jar" />
