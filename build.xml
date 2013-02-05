@@ -11,6 +11,7 @@
     <target name="runtests" description="Make output directories and run the MXUnit task">
       <taskdef name="mxunittask" classname="org.mxunit.ant.MXUnitAntTask"  classpath="../../ant/lib/mxunit-ant.jar" />
         <mxunittask outputdir="testresults" verbose="true">
+        <directory path="src/" recurse="false" componentPath="mxunit.tests.framework" />
         </mxunittask>
   </target>
 
