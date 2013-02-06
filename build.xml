@@ -10,7 +10,7 @@
 	</target>
  
 	 <target name="junit" description="JUnit Tests">
-		<junit srcdir="src/>
+		<junit srcdir="src"/>
 			<classpath refid="base.path"/>
 		</junit>
 	</target>
