@@ -1,28 +1,21 @@
 <project default="main">
+	
 	<target name="main" depends="compile, compress" description="Main target">
 		<echo>Building the .jar file.</echo>
 	</target>
  
-	 <path id="junit.class.path">  
-    	<pathelement location="/usr/share/java/junit.jar"/>  
-    	<pathelement path="${java.class.path}/"/>  
-    	<pathelement path="${additional.path}"/>  
-  	</path>  
-	
-	<junit printsummary="yes" haltonfailure="yes">
-		<formatter type="xml"/>
-		<classpath refid="junit.class.path"/>
-			<batchtest fork="yes" todir=".">
-				<fileset dir="src">
-					<include name="**/*Test*.java"/>
-				</fileset>
-			</batchtest>
-	</junit>
-  <target name="compile" description="Compilation target">	
-      <javac srcdir="src/"/>
-  </target>
+	 <target name="junit" description="JUnit Tests">
+		<junit srcdir="src/edu/gmu/swe437/continuous_integration/">
+			<classpath refid="base.path"/>
+		</junit>
+	</target>
+
+	<target name="compile" description="Compilation target">	
+		<javac srcdir="src/"/>
+	</target>
 
 	<target name="compress" description="Compression target">
 		<jar jarfile="Project.jar" basedir="src/" includes="*.class"/>
 	</target>
+	
 </project>
