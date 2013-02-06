@@ -1,5 +1,10 @@
 <project default="main">
 	
+	<path id="base.path">
+		<pathelement path="${classpath}"/>
+		<pathelement location="/usr/share/java/junit.jar"/>
+	</path>
+	
 	<target name="main" depends="compile, compress" description="Main target">
 		<echo>Building the .jar file.</echo>
 	</target>
