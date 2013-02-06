@@ -5,6 +5,10 @@
 		<pathelement location="/usr/share/java/junit.jar"/>
 	</path>
 	
+	<path id="junit.class.path">  
+		<pathelement location="/usr/share/java/junit.jar"/>   
+	</path> 
+	
 	<target name="main" depends="compile, compress" description="Main target">
 		<echo>Building the .jar file.</echo>
 	</target>
@@ -17,7 +21,10 @@
 	
  	<target name="junit" description="JUnit Tests">
 		<junit srcdir="src/">
-			<classpath refid="base.path"/>
+			<classpath refid="junit.class.path"/>
+				<fileset dir="src/">
+					<include name="**/*Test*.java"/>
+				</fileset>
 		</junit>
 	</target>
 
