@@ -5,7 +5,7 @@
  
 	<junit printsummary="yes" haltonfailure="yes">
 		<formatter type="xml"/>
-		<classpath refid="/usr/share/java/junit.jar"/>
+		<classpath refid="**java/junit.jar"/>
 			<batchtest fork="yes" todir="${dir.report.unittests.xml}">
 				<fileset dir="src">
 					<include name="**/*Test*.java"/>
