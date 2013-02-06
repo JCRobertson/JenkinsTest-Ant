@@ -14,19 +14,16 @@ public class StudentTest {
 	@Test (expected = NullPointerException.class)
 	public void nameNotNullTest() {
 		s = new Student("sd ", 5);
-		fail();
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void nameNotLegalTest() {
 		s = new Student("", 5);
-		fail();
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void numberNotLessThanZero(){
 		s = new Student("Joe", -999);
-		fail();
 	}
 	
 	@Test
