@@ -3,20 +3,9 @@
 		<echo>Building the .jar file.</echo>
 	</target>
  
-	<path id="test.class.path">
-	<pathelement location="${dest.dir.classes}" /> 
-	</path>
-	
-	<path id="build.class.path">
-	<fileset dir="${home}/lib">
-	<include name="*.jar" />
-	</fileset>
-	</path> 
-	
 	<junit printsummary="yes" haltonfailure="yes">
 		<formatter type="xml"/>
-		<classpath refid="test.class.path" />
-		<classpath refid="build.class.path" />
+		<classpath refid="/usr/share/java/junit.jar"/>
 			<batchtest fork="yes" todir="${dir.report.unittests.xml}">
 				<fileset dir="src">
 					<include name="**/*Test*.java"/>
