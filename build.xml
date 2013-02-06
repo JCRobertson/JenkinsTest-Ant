@@ -9,8 +9,8 @@
 		<echo>Building the .jar file.</echo>
 	</target>
  
-	 <target name="junit" description="JUnit Tests">
-		<junit srcdir="src">
+ 	<target name="junit" description="JUnit Tests">
+		<junit srcdir="src/">
 			<classpath refid="base.path"/>
 		</junit>
 	</target>
