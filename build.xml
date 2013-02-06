@@ -10,7 +10,7 @@
 	</target>
  
 	 <target name="junit" description="JUnit Tests">
-		<junit srcdir="src/edu/gmu/swe437/continuous_integration/">
+		<junit srcdir="src/>
 			<classpath refid="base.path"/>
 		</junit>
 	</target>
