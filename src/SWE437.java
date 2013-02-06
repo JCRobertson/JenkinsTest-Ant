@@ -8,6 +8,6 @@ public class SWE437 {
 		Student Drew = new Student("Drew", 8);
 		System.out.println(James.toString());
 		System.out.println(Paul.toString());
-		System.out.println(Jeff.toString());
+		System.out.println(Jeff.toString()); 
 	}
 }
