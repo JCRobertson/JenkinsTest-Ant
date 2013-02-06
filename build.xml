@@ -4,7 +4,7 @@
 	</target>
  
 	 <path id="junit.class.path">  
-    	<pathelement location="/usr/share/java/"/>  
+    	<pathelement location="/usr/share/java/junit.jar"/>  
     	<pathelement path="${java.class.path}/"/>  
     	<pathelement path="${additional.path}"/>  
   	</path>  
