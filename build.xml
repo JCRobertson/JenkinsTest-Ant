@@ -49,10 +49,11 @@
 	    <echo>Compile the java code from ${src} into ${build}...</echo>
 		<!-- Compile the java code from ${src} into ${build} -->
 		<javac includeantruntime="false" srcdir="${src}" destdir="${build}"/>
+		<javac includeantruntime="false" srcdir="${tests}" destdir="${build}"/>
 	</target>
 
 	<target name="dist" depends="junit" description="generate the distribution" >
-	    <echo>Create the distribution directory...</echo>
+	    <echo>Create the distribution directory ${dist}/lib...</echo>
 		<!-- Create the distribution directory -->
 		<mkdir dir="${dist}/lib"/>
 		<echo>Put everything in ${build} into the JenkinsTest-${DSTAMP}.jar file...</echo>
