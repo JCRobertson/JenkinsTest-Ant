@@ -28,9 +28,9 @@
 	    <echo>Running the junit tests...</echo>
 		<junit printsummary="on" errorproperty="tests failed">
 			<classpath>
-				<pathelement location="${tests}"/>
-				<pathelement location="/usr/share/java/ant-junit.jar"/>
+			   	<pathelement location="/usr/share/java/ant-junit.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
+				<pathelement location="${tests}"/>
 			</classpath>
 	
 			<formatter type="xml"/> 
