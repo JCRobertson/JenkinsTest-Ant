@@ -23,7 +23,7 @@
 		<!-- <mkdir dir="${build}"/>-->
 	</target>
 
-	
+
 	<target name="junit" depends="compile">
 	    <echo>Running the junit tests...</echo>
 		<junit printsummary="on" errorproperty="tests failed">
