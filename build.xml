@@ -29,7 +29,7 @@
 		<junit printsummary="on" errorproperty="tests failed">
 			<classpath>
 				<pathelement location="${tests}"/>
-				<pathelement location="$/usr/share/ant/lib/ant-junit.jar"/>
+				<pathelement location="/usr/share/java/ant-junit.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
 			</classpath>
 	
