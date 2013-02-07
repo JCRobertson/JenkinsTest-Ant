@@ -1,8 +1,4 @@
 JenkinsTest
 ===========
 
-A test project to get accustomed to jenkins
-Jenkins push tests:
-1
-2
-3
+A test project to get accustomed to jenkins for SWE437 class
