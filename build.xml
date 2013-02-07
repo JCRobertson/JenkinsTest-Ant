@@ -14,6 +14,12 @@
 		<pathelement location="/usr/share/java/junit.jar" />
 	</path>
 
+	<path id="junit.class.path">
+	    <fileset dir="/usr/share/java/" includes="*.jar"/>
+	    <pathelement location="${src}"/>
+	    <pathelement location="${tests}"/>
+	</path>
+	
 	<target name="init">
 	    <echo>Create the time stamp...</echo>
 		<!-- Create the time stamp -->
@@ -25,15 +31,16 @@
 
 	
 	<target name="junit" depends="compile">
+	    <property name="junit.path" refid="junit.class.path"/>
 	    <echo>Running the junit tests...</echo>
 		<junit printsummary="on" errorproperty="tests failed">
-			<classpath>
+			<!--<classpath>
 				<pathelement location="${tests}"/>
 				<pathelement location="/usr/share/java/ant-junit.jar"/>
 				<pathelement location="/usr/share/java/ant-junit-1.8.0.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
 				<pathelement location="/usr/share/java/junit-3.8.2.jar" />
-			</classpath>
+			</classpath>-->
 	
 			<formatter type="xml"/>
 
