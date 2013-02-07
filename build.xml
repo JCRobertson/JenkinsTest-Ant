@@ -33,7 +33,7 @@
 				<pathelement location="/usr/share/java/junit.jar" />
 			</classpath>
 	
-			<formatter type="xml"/>
+			<formatter type="xml"/> 
 
 			<test name="StudentTest" todir="${reports}"/>
 			
