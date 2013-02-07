@@ -28,9 +28,6 @@
 	    <echo>Running the junit tests...</echo>
 		<junit printsummary="on" errorproperty="tests failed">
 			<classpath>
-			    <pathelement location="${tests}"/>
-				<pathelement path="${classpath}"/>
-				<pathelement location="${build}"/>
 				<pathelement location="$/usr/share/ant/lib/ant-junit.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
 			</classpath>
@@ -38,7 +35,7 @@
 			<formatter type="xml"/>
 
 			<batchtest fork="no" todir="${reports}">
-				<fileset dir="${build}">
+				<fileset dir="${tests}">
 					<include name="**/*Test*.java"/>
 					<exclude name="**/*AllTests.java"/>
 				</fileset>
