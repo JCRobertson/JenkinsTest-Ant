@@ -31,6 +31,7 @@
 			    <pathelement location="${tests}"/>
 				<pathelement path="${classpath}"/>
 				<pathelement location="${build}"/>
+				<pathelement location="${test.lib.dir}/ant/ant-junit.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
 			</classpath>
 	
