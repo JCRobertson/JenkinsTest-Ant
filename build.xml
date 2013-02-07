@@ -45,6 +45,9 @@
 		<!-- Compile the java code from ${src} into ${build} -->
 		<javac includeantruntime="false" srcdir="${src}" destdir="${build}">
 			<classpath refid="base.path" />
+			<fileset dir="${src}">
+				<exclude name="**/*Test*.java"/>
+			</fileset>
 		</javac>
 	</target>
 
