@@ -25,9 +25,10 @@
 	<target name="junit" depends="compile">
 		<junit printsummary="on" errorproperty="tests failed">
 			<classpath>
-				<pathelement path="${classpath}"/>
+			    <pathelement location="${tests}"/>
+				<!--  <pathelement path="${classpath}"/>
 				<pathelement location="${build}"/>
-				<pathelement location="/usr/share/java/junit.jar" />
+				<pathelement location="/usr/share/java/junit.jar" />-->
 			</classpath>
 	
 			<formatter type="plain" usefile="false"/>
