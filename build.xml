@@ -37,7 +37,7 @@
 	
 			<formatter type="xml"/> 
 			
-			<batchtest todir="${reports}">
+			<batchtest forked="no" todir="${reports}">
 				<fileset dir="${tests}">
 					<include name="**/*Test*.*"/>
 				</fileset>
