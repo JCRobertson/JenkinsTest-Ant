@@ -38,7 +38,6 @@
 
 			<batchtest fork="no" todir="${reports}">
 				<fileset dir="${build}">
-				    <include name="StudentTest.java"/>
 					<include name="**/*Test*.java"/>
 					<exclude name="**/*AllTests.java"/>
 				</fileset>
