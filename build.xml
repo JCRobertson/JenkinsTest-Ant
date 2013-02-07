@@ -34,15 +34,12 @@
 			</classpath>
 	
 			<formatter type="xml"/> 
-
-			<test name="StudentTest" todir="${reports}"/>
 			
-			<!--<batchtest todir="${reports}">
+			<batchtest todir="${reports}">
 				<fileset dir="${tests}">
-					<include name="**/*Test*.java"/>
-					<exclude name="**/*AllTests.java"/>
+					<include name="**/*Test*.*"/>
 				</fileset>
-			</batchtest>-->
+			</batchtest>
 		</junit>
 	</target>
 
