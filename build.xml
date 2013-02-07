@@ -34,7 +34,7 @@
 			<formatter type="plain" usefile="false"/>
 	
 			<batchtest fork="no" todir="${reports}">
-				<fileset dir="${src}">
+				<fileset dir="${tests}">
 					<!-- <include name="**/*Test*.java"/>
 					<exclude name="**/*AllTests.java"/>-->
 				</fileset>
