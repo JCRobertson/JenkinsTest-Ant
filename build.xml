@@ -3,6 +3,11 @@
 	<target name="main" depends="compile, compress" description="Main target">
 	<echo>Building the .jar file.</echo>
 	</target>
+	
+	<path id="base.path"> 
+	<pathelement path="${classpath}"/> 
+	<pathelement location="/usr/share/java/junit.jar"/> 
+	</path>
 	 
 	<path id="junit.class.path">  
 	<pathelement location="/usr/share/java/junit.jar"/>  
@@ -21,6 +26,7 @@
 		
 	<target name="compile" description="Compilation target">	
 		<javac srcdir="src/"/>
+		<classpath refid="base.path"/>
 	</target>
 	
 	<target name="compress" description="Compression target">
