@@ -40,7 +40,7 @@
 	<target name="compile" depends="init"
         description="compile the source " >
 		<!-- Compile the java code from ${src} into ${build} -->
-		<javac includeantruntime="false" srcdir="${src}" destdir="${build}" verbose="yes">
+		<javac includeantruntime="false" srcdir="${src}" destdir="${build}">
 			<classpath refid="base.path" />
 		</javac>
 	</target>
