@@ -12,7 +12,7 @@
 	<junit printsummary="yes" haltonfailure="yes">
 		<formatter type="plain" usefile="false" />
 		<classpath refid="junit.class.path"/>
-			<batchtest fork="yes" todir=".">
+			<batchtest fork="no" todir=".">
 				<fileset dir="src">
 					<include name="**/*Test*.java"/>
 				</fileset>
