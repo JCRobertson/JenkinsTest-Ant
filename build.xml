@@ -20,7 +20,7 @@
 		<mkdir dir="${build}"/>
 	</target>
 
-	<junit printsummary="yes" haltonfailure="yes">
+	<!--<junit printsummary="yes" haltonfailure="yes">
 		<classpath>
 			<pathelement path="${classpath}"/>
 			<pathelement location="${build}"/>
@@ -35,7 +35,7 @@
 				<exclude name="**/*AllTests.java"/>
 			</fileset>
 		</batchtest>
-	</junit>
+	</junit>-->
 
 	<target name="compile" depends="init"
         description="compile the source " >
