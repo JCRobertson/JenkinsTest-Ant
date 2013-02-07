@@ -29,7 +29,7 @@
 
 		<formatter type="plain"/>
 
-		<batchtest fork="yes" todir="${reports}">
+		<batchtest fork="yes" todir="${reports}"> 
 			<fileset dir="${src}">
 				<include name="**/*Test*.java"/>
 				<exclude name="**/*AllTests.java"/>
