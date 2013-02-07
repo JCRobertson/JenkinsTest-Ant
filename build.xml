@@ -44,9 +44,7 @@
 	<target name="compile" depends="init"
         description="compile the source " >
 		<!-- Compile the java code from ${src} into ${build} -->
-		<javac includeantruntime="false" srcdir="${src}" destdir="${build}">
-			<classpath srcdir="${src}" />
-		</javac>
+		<javac includeantruntime="false" srcdir="${src}" destdir="${build}"/>
 	</target>
 
 	<target name="dist" depends="junit"
