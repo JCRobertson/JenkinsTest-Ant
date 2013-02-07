@@ -35,7 +35,7 @@
 	
 			<formatter type="xml"/>
 
-			<test name="StudentTest.java" todir="${reports}"/>
+			<test name="StudentTest" todir="${reports}"/>
 			
 			<!--<batchtest todir="${reports}">
 				<fileset dir="${tests}">
