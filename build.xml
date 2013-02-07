@@ -30,18 +30,14 @@
 			<classpath>
 			   	<pathelement location="/usr/share/java/ant-junit.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
-				<pathelement location="${tests}"/>
-				<fileset dir="${tests}">
-					<include name="**/*Test*.*"/>
-				</fileset>
 			</classpath>
 	
 			<formatter type="xml"/> 
 			
 			<batchtest todir="${reports}">
-				<!--<fileset dir="${tests}">
+				<fileset dir="${tests}">
 					<include name="**/*Test*.*"/>
-				</fileset>-->
+				</fileset>
 			</batchtest>
 		</junit>
 	</target>
