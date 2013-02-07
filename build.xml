@@ -45,7 +45,7 @@
         description="compile the source " >
 		<!-- Compile the java code from ${src} into ${build} -->
 		<javac includeantruntime="false" srcdir="${tests}" destdir="${build}">
-			<classpath refid="${classpath}/src" />
+			<classpath refid="${classpath}" />
 		</javac>
 	</target>
 
