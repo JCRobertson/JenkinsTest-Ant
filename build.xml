@@ -30,7 +30,9 @@
 			<classpath>
 				<pathelement location="${tests}"/>
 				<pathelement location="/usr/share/java/ant-junit.jar"/>
+				<pathelement location="/usr/share/java/ant-junit-1.8.0.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
+				<pathelement location="/usr/share/java/junit-3.8.2.jar" />
 			</classpath>
 	
 			<formatter type="xml"/>
