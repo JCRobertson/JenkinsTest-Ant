@@ -26,8 +26,8 @@
 		<junit printsummary="on" errorproperty="tests failed">
 			<classpath>
 			    <pathelement location="${tests}"/>
-				<!--  <pathelement path="${classpath}"/>
-				<pathelement location="${build}"/>-->
+				<pathelement path="${classpath}"/>
+				<pathelement location="${build}"/>
 				<pathelement location="/usr/share/java/junit.jar" />
 			</classpath>
 	
