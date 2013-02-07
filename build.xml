@@ -27,7 +27,7 @@
 			<pathelement location="/usr/share/java/junit.jar" />
 		</classpath>
 
-		<formatter type="plain"/>
+		<formatter type="plain" usefile="false"/>
 
 		<batchtest fork="yes" todir="${reports}"> 
 			<fileset dir="${src}">
