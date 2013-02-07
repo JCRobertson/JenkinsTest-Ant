@@ -10,7 +10,7 @@
 	<property name="reports" location="reports"/>
 
 	<path id="base.path">
-		<pathelement path="${classpath}" />
+		<pathelement path="${classpath}"/>
 		<pathelement location="/usr/share/java/junit.jar" />
 	</path>
 
