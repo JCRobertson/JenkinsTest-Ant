@@ -28,18 +28,21 @@
 	    <echo>Running the junit tests...</echo>
 		<junit printsummary="on" errorproperty="tests failed">
 			<classpath>
+				<pathelement location="${tests}"/>
 				<pathelement location="$/usr/share/ant/lib/ant-junit.jar"/>
 				<pathelement location="/usr/share/java/junit.jar" />
 			</classpath>
 	
 			<formatter type="xml"/>
 
-			<batchtest fork="no" todir="${reports}">
+			<test name="StudentTest.java" todir="${reports}"/>
+			
+			<!--<batchtest todir="${reports}">
 				<fileset dir="${tests}">
 					<include name="**/*Test*.java"/>
 					<exclude name="**/*AllTests.java"/>
 				</fileset>
-			</batchtest>
+			</batchtest>-->
 		</junit>
 	</target>
 
