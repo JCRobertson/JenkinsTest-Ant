@@ -38,7 +38,7 @@
 			<formatter type="xml"/>
 
 			<batchtest fork="no" todir="${reports}">
-				<fileset dir="${build}">
+				<fileset dir="${tests}">
 					<include name="**/*Test*.java"/>
 					<exclude name="**/*AllTests.java"/>
 				</fileset>
