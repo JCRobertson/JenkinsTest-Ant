@@ -18,9 +18,9 @@
 	    <echo>Create the time stamp...</echo>
 		<!-- Create the time stamp -->
 		<tstamp/>
-		<echo>Create the build directory structure used by compile...</echo>
+		<!-- <echo>Create the build directory structure used by compile...</echo>-->
 		<!-- Create the build directory structure used by compile -->
-		<mkdir dir="${build}"/>
+		<!-- <mkdir dir="${build}"/>-->
 	</target>
 
 	
@@ -38,8 +38,8 @@
 
 			<batchtest fork="no" todir="${reports}">
 				<fileset dir="${build}">
-					<!-- <include name="**/*Test*.java"/>
-					<exclude name="**/*AllTests.java"/>-->
+					<include name="**/*Test*.java"/>
+					<exclude name="**/*AllTests.java"/>
 				</fileset>
 			</batchtest>
 		</junit>
