@@ -15,14 +15,17 @@
 	</path>
 
 	<target name="init">
+	    <echo>Create the time stamp...</echo>
 		<!-- Create the time stamp -->
 		<tstamp/>
+		<echo>Create the build directory structure used by compile...</echo>
 		<!-- Create the build directory structure used by compile -->
 		<mkdir dir="${build}"/>
 	</target>
 
 	
 	<target name="junit" depends="compile">
+	    <echo>Running the junit tests...</echo>
 		<junit printsummary="on" errorproperty="tests failed">
 			<classpath>
 			    <pathelement location="${tests}"/>
@@ -43,21 +46,22 @@
 	</target>
 
 	<target name="compile" depends="init" description="compile the source " >
+	    <echo>Compile the java code from ${src} into ${build}...</echo>
 		<!-- Compile the java code from ${src} into ${build} -->
 		<javac includeantruntime="false" srcdir="${src}" destdir="${build}"/>
 	</target>
 
-	<target name="dist" depends="junit"
-        description="generate the distribution" >
+	<target name="dist" depends="junit" description="generate the distribution" >
+	    <echo>Create the distribution directory...</echo>
 		<!-- Create the distribution directory -->
 		<mkdir dir="${dist}/lib"/>
-
+		<echo>Put everything in ${build} into the JenkinsTest-${DSTAMP}.jar file...</echo>
 		<!-- Put everything in ${build} into the JenkinsTest-${DSTAMP}.jar file -->
 		<jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
 	</target>
 
-	<target name="clean"
-        description="clean up" >
+	<target name="clean" description="clean up" >
+	    <echo>Delete the ${build} and ${dist} directory trees...</echo>
 		<!-- Delete the ${build} and ${dist} directory trees -->
 		<delete dir="${build}"/>
 		<delete dir="${dist}"/>
