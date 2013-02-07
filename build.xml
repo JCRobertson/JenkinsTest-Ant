@@ -35,7 +35,7 @@
 			</classpath>
 	
 			<formatter type="plain" usefile="false"/>
-			<test name="StudentTest.java" fork="no" todir="${reports}"/>
+			<test name="StudentTest" fork="no" todir="${reports}"/>
 			<!--<batchtest fork="no" todir="${reports}">
 				<fileset dir="${tests}">
 					<include name="**/*Test*.java"/>
