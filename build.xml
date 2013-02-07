@@ -10,7 +10,7 @@
 	</path>  
 	
 	<junit printsummary="yes" haltonfailure="yes">
-		<formatter type="xml"/>
+		<formatter type="plain" usefile="false" />
 		<classpath refid="junit.class.path"/>
 			<batchtest fork="yes" todir=".">
 				<fileset dir="src">
